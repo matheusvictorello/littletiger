@@ -5,6 +5,7 @@ const symbolImages = {
 };
 
 let balance = localStorage.getItem('balance') !== null ? parseFloat(localStorage.getItem('balance')) : 10;  // Saldo inicial
+let betAmount = 1;
 
 // Atualiza o saldo no display
 function updateBalanceDisplay() {
