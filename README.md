@@ -22,3 +22,7 @@ To configure the pipeline, you need to set up GitHub Secrets for your AWS creden
    - `AWS_ENDPOINT`: Your custom AWS endpoint.
 
 These secrets will be used by the GitHub Actions workflow to authenticate and deploy the changed files to the S3 bucket.
+
+### Using the AWS Endpoint in the Sync Command
+
+When running the `aws s3 sync` command, use the `--endpoint-url $AWS_ENDPOINT` option to specify the custom AWS endpoint.

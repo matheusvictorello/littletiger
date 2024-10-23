@@ -27,8 +27,7 @@ jobs:
         aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
         aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
         aws configure set default.region us-east-1
-        aws configure set s3.endpoint $AWS_ENDPOINT
 
     - name: Sync files to S3
       run: |
-        aws s3 sync . s3://littletiger --exclude ".git/*" --delete
+        aws s3 sync . s3://littletiger --exclude ".git/*" --delete --endpoint-url $AWS_ENDPOINT
