@@ -4,12 +4,12 @@ const symbolImages = {
     'Estrela': 'https://br-se1.magaluobjects.com/littletiger/estrela.png'
 };
 
-let balance = 10;  // Saldo inicial
-let betAmount = 1;  // Aposta inicial
+let balance = localStorage.getItem('balance') !== null ? parseFloat(localStorage.getItem('balance')) : 10;  // Saldo inicial
 
 // Atualiza o saldo no display
 function updateBalanceDisplay() {
     document.getElementById('balance').textContent = `Saldo: R$${balance.toFixed(2)}`;
+    localStorage.setItem('balance', balance);  // Salva o saldo no localstorage
 }
 
 // Atualiza o valor da aposta no display
