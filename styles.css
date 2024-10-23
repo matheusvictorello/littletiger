@@ -1,0 +1,100 @@
+/* Estilos gerais para o body e container */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo dos slots */
+#slots {
+    display: flex;
+    flex-direction: column; /* Organiza as linhas de slots verticalmente */
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.slot-row {
+    display: flex; /* Organiza os slots em uma linha */
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.slot {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden; /* Oculta as partes fora do slot */
+    border: 2px solid #000;
+    margin: 0 10px;  /* Espaçamento entre os slots */
+    border-radius: 5px;
+    background-color: #f8f8f8;
+}
+
+.slot-inner {
+    display: flex;
+    flex-direction: column; /* Para empilhar as imagens verticalmente */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: auto;
+}
+
+.slot img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Animação de rotação vertical */
+@keyframes spinContinuous {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-300%); }  /* Movimenta 4 imagens para simular a rotação */
+}
+
+
+.spinning .slot-inner {
+    animation: spinContinuous 1.5s linear infinite; /* Roda continuamente até parar */
+}
+
+/* Estilos do botão */
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #FFA500;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #FF8C00;
+}
+
+button:active {
+    background-color: #FF7F00;
+}
+
+/* Estilo do resultado */
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.stopped .slot-inner {
+    animation: none;  /* Remove a animação quando o slot parar */
+}
