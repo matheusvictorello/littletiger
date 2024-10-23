@@ -19,5 +19,6 @@ To configure the pipeline, you need to set up GitHub Secrets for your AWS creden
 5. Add the following secrets:
    - `AWS_ACCESS_KEY_ID`: Your AWS access key ID.
    - `AWS_SECRET_ACCESS_KEY`: Your AWS secret access key.
+   - `AWS_ENDPOINT`: Your custom AWS endpoint.
 
 These secrets will be used by the GitHub Actions workflow to authenticate and deploy the changed files to the S3 bucket.
