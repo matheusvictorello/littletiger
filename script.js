@@ -100,13 +100,13 @@ document.getElementById('spinButton').addEventListener('click', function() {
                 if (combo[0] === combo[1] && combo[1] === combo[2]) {
                     switch (combo[0]) {
                         case 'Tigre':
-                            totalMultiplier += 5;  // Trinca de Tigres equivale a 5x
+                            totalMultiplier += 3;  // Trinca de Tigres equivale a 3x
                             break;
                         case 'Fruta':
-                            totalMultiplier += 2.5;  // Trinca de Frutas equivale a 2.5x
+                            totalMultiplier += 1.5;  // Trinca de Frutas equivale a 1.5x
                             break;
                         case 'Estrela':
-                            totalMultiplier += 1.5;  // Trinca de Estrelas equivale a 1.5x
+                            totalMultiplier += 1;  // Trinca de Estrelas equivale a 1x
                             break;
                     }
                 }
